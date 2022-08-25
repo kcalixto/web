@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac-filmes - 24-08-2022</title>
+</head>
+
+<body>
+    <h2>Cadastro de filmes</h2>
+
+    <label id="title-label" for="title">Título</label>
+    <br />
+    <input type="text" name="title" id="title">
+    <br />
+    
+    <label id="sinopse-label" for="sinopse">Sinopse</label>
+    <br />
+    <textarea name="sinopse" id="sinopse"></textarea>
+    <br />
+    
+    <label id="release-date-label" for="release-date">Data de lançamento</label>
+    <br />
+    <input type="date" name="release-date" id="release-date">
+    <br />
+
+    <label id="genre-label" for="genre">Gênero</label>
+    <br />
+    <input type="text" id="genre-input" list="genre"></input>
+    <datalist id="genre">
+        <option value="Ação">Ação</option>
+        <option value="Romance">Romance</option>
+        <option value="Romance">Aventura</option>
+    </datalist>
+    <br />
+    
+    <label id="note-label" for="note">Nota</label>
+    <br />
+    <input min="0" max="10" type="number" name="note" id="note">
+    <br />
+
+    <label id="genre-label" for="genre">Onde assistir?</label>
+    <br />
+    <select name="streamming" id="streamming">
+        <option value="Netflix">Netflix</option>
+        <option value="Netflix">Amazon</option>
+        <option value="Netflix">D+</option>
+    </select>
+    <br />
+    
+    <label id="watched-label" for="watched">Assistido?</label>
+    <br />
+    <input type="checkbox" name="watched" id="watched">
+    <br />
+
+</body>
+
+</html>
