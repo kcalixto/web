@@ -1,0 +1,67 @@
+@import url("https://use.typekit.net/ndp8dwk.css");
+
+*{
+    margin: 0;
+    pad: 0;
+}
+
+:root{
+    --bg-principal: #121212;
+    --bg-secundario: #2D2D2D;
+    --cor-destaque: #E0A100;
+    --font-color-principal: #FFF;
+    --font-titulo: 'Bebas Neue', cursive;
+    --font-destaque: 'montserrat', sans-serif;
+    --font-principal: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--bg-principal);
+    color: var(--font-color-principal);
+    font-family: var(--font-principal);
+    text-decoration: none;
+}
+
+a{
+    color: var(--font-color-principal)
+}
+
+header{
+    display: flex;
+    background-color: var(--bg-secundario);
+    align-items: center;
+}
+
+h1{
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    font-family: var(--font-titulo);
+}
+
+nav li{
+    list-style: none;
+    margin: 0 2rem;
+}
+
+nav ul{
+    display: flex;
+    align-items: flex-end;
+}
+
+#hero {
+    height: 20rem;
+    width: 100%;
+    position: relative;
+}
+
+#hero::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    top: -30px;
+    background-image: url("https://image.tmdb.org/t/p/original/6d3ailFfiYN4KzGgAoFlgYbaFyx.jpg");
+    background-size: cover;
+    filter: opacity(0.7);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+}
