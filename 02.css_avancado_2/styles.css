@@ -1,0 +1,174 @@
+@import url("https://use.typekit.net/ndp8dwk.css");
+
+*{
+    margin: 0;
+    pad: 0;
+}
+
+:root{
+    --bg-principal: #121212;
+    --bg-secundario: #2D2D2D;
+    --cor-destaque: #E0A100;
+    --font-color-principal: #FFF;
+    --font-titulo: 'Bebas Neue', cursive;
+    --font-destaque: 'montserrat', sans-serif;
+    --font-principal: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--bg-principal);
+    color: var(--font-color-principal);
+    font-family: var(--font-principal);
+    text-decoration: none;
+}
+
+a{
+    color: var(--font-color-principal)
+}
+
+header{
+    display: flex;
+    background-color: var(--bg-secundario);
+    align-items: center;
+}
+
+h1{
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    font-family: var(--font-titulo);
+}
+
+nav li{
+    list-style: none;
+    margin: 0 2rem;
+}
+
+nav ul{
+    display: flex;
+    align-items: flex-end;
+}
+
+#hero {
+    height: 20rem;
+    width: 100%;
+    position: relative; 
+}
+
+#hero::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    top: -30px;
+    background-image: url("https://image.tmdb.org/t/p/original/6d3ailFfiYN4KzGgAoFlgYbaFyx.jpg");
+    background-size: cover;
+    filter: opacity(0.7);
+    z-index: -1;
+    box-shadow: inset 0 -100px 100px var(--bg-principal);
+    transform: scale(2);
+    animation: zoom 10s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#herp p{
+    font-size: 3.6rem;
+    font-family: var(--font-destaque);
+    padding-left: 4.8rem;
+    /* padding-top: ; */
+    /* text-shadow: ; */
+}
+
+/* {
+
+    padding-left: .4rem;
+} */
+
+.secao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 100px;
+    background-color: var(--bg-secundario);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    position: relative;
+}
+
+.card .icone-favorito{
+    position: absolute;
+    font-size: 2rem;
+    right: 1rem;
+    text-shadow: 2px 2px 2px black;
+    filter: opacity(0);
+    transition: filter .5s;
+}
+
+.card:hover .icone-favorito{
+    filter: opacity(1);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: filter .5s;
+}
+
+.card img:hover{
+    filter: opacity(0.7);
+}
+
+.card p:first-of-type{
+    font-size: 1.6rem;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    margin-top: .5rem;
+}
+
+/* .card p: {
+    font-size: 1.4rem;
+    filter: opacity(.8);
+    margin-top: .5rem;
+} */
+
+.botao {
+    background-color: var(--cor-destaque);
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding: .5rem 2rem;
+    margin: 1rem;
+    transition: box-shadow .5s ease-in-out;
+}
+
+.botao:hover{
+    box-shadow: 0 0 8px #FFF;
+}
+
+@media (max-width: 425px) {
+    header{
+        flex-direction: column;
+    }
+}
+
+
+
+.h2 {
+    font-family: var(--font-principal);
+    font-size: 1.6rem;
+    /* border-left: 4px solid var(--cor-destaque); */
+    margin: 1.6rem;
+    padding: 0.4rem;
+}
