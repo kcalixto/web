@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+:root {
+    --bg-principal: #111;
+    --bg-secundario: #2D2D2D;
+    --cor-destaque: #FFB800;
+    --cor-button: #0F99FF;
+    --font-color-principal: #FFF;
+    --font-titulo: 'Bebas Neue';
+    --font-destaque: 'Montserrat', sans-serif;
+    --font-principal: 'Roboto', sans-serif;
+    font-size: 10px;
+
+    --debug-mode: none;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--font-color-principal);
+    font-family: var(--font-principal);
+}
+
+a {
+    color: var(--font-color-principal);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    background-color: var(--bg-secundario);
+    align-items: flex-end;
+    height: fit-content;
+}
+
+h1 {
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    font-family: var(--font-titulo);
+    font-size: 4.8rem;
+    font-weight: 400;
+}
+
+nav li {
+    font-family: var(--font-principal);
+    list-style: none;
+    font-weight: 500;
+    margin: 0 2rem;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+#hero {
+    height: 20rem;
+    width: 100%;
+    position: relative;
+
+    border: 1px var(--debug-mode) orange;
+    overflow: hidden;
+}
+
+#hero::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: url("https://www.themoviedb.org/t/p/original/nvMoOlC7HHZ9U4WknwwGOVefvnI.jpg");
+    position: absolute;
+    background-size: cover;
+    filter: opacity(.4);
+    z-index: -1;
+    /* box-shadow: inset 0 -100px 100px var(--bg-principal); */
+    transform: scale(2);
+    animation: zoom 15s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(2);
+    }
+}
+
+#hero p {
+    max-width: 50%;
+    font-size: 3.6rem;
+    font-family: var(--font-destaque);
+    padding-left: 4.8rem;
+    padding-top: 4.8rem;
+    text-shadow: 2px 2px 2px #111;
+}
+
+@media (max-width: 468px) {
+    #hero p {
+        font-size: 2.8rem;
+        max-width: 75%;
+    }
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-family: var(--font-principal);
+    font-weight: 500;
+    border-left: 4px solid var(--cor-destaque);
+    margin: 1.6rem;
+    padding-left: .4rem;
+}
+
+.secao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 180px;
+    background-color: var(--bg-secundario);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    position: relative;
+}
+
+.card .icone-favorito {
+    position: absolute;
+    font-size: 2rem;
+    right: 1rem;
+    text-shadow: 2px 2px 2px #000;
+    filter: opacity(0);
+    transition: filter .5s;
+}
+
+.card:hover .icone-favorito {
+    filter: opacity(1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: filter .5s;
+}
+
+.card img:hover {
+    filter: opacity(.7);
+}
+
+.card p:first-of-type {
+    font-size: 1.6rem;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    margin-top: .5rem;
+}
+
+.card p:nth-of-type(2) {
+    font-size: 1.4rem;
+    filter: opacity(.8);
+    margin-top: .5rem;
+}
+
+.botao {
+    background-color: var(--cor-button);
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding: .5rem 2rem;
+    margin: 1rem;
+    font-weight: 400;
+    transition: box-shadow .5s ease-in-out;
+}
+
+.botao:hover {
+    box-shadow: 0 0 8px #FFF;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    border: 2px var(--debug-mode) purple;
+}
+
+@media (max-width: 512px) {
+    header {
+        flex-direction: column;
+        height: 100px;
+    }
+}
+
+.img_logo {
+    width: 35px;
+    height: 50px;
+    filter: invert();
+    padding: 5px;
+}
+
+.logo {
+    min-width: fit-content;
+    display: flex;
+    flex-direction: row;
+    border: 1px var(--debug-mode) green;
+}
+
+.text-header {
+    width: 100%;
+    height: 100%;
+    border: 1px var(--debug-mode) red;
+
+    position: relative;
+}
+
+.text-header li {
+    position: absolute;
+}
+
+.series-tag {
+    left: 25%;
+}
+
+.sobre-tag {
+    right: 0;
+}
