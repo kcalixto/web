@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +10,20 @@
 <body>
     <div class="card">
         <form action="#">
+            <div class="field">
             <input type="text" name="idade" id="idade" placeholder="idade">
-            <span>você não tem idade para isso</span>
-            <button id="cadastrar">cadastrar</button>
+            <span id="idade-error"></span>
+            </div>
+            
+            <button  class="button" id="cadastrar">cadastrar</button>
+
+
         </form>
     </div>
+
+
+
+
 </body>
+<script src="script.js"></script>
 </html>
