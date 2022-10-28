@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --light-bg: #767676;
+    --bold-bg: #2B2B2B;
+    --bold-bg-hover: rgb(31, 30, 30);
+    --orange-bg: #FF5C00;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #383838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator-body{
+    background-color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    max-width: 240px;
+    max-height: 399px;
+
+    padding: 1rem;
+}
+
+.result-section{
+    min-width: 100%;
+    max-width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.result-container{
+    width: 100%;
+    height: 50%;
+    text-align: end;
+    padding-bottom: 1rem;
+}
+
+.result{
+    font-size: 40px;
+    color: white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.buttons-section{
+    width: 100%;
+    height: 75%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+
+.light-bg{
+    background-color: var(--light-bg);
+}
+.bold-bg{
+    background-color: var(--bold-bg);
+}
+.orange-bg{
+    background-color: var(--orange-bg);
+}
+
+button {
+    color: white;
+    border: none;
+    border-radius: 50%;
+    /* padding: 5px 15px; */
+}
+
+button:hover{
+    filter: brightness(85%)
+}
+
+button:active{
+    filter: opacity(50%);
+}
+
+.operator{
+    font-size: 1.18rem;
+}
+
+.number{
+    font-size: 1.18rem;
+}
+
+.sign{
+    font-size: 1.18rem;
+}
+
+.operator{
+    font-size: 1.18rem;
+}
+
+.special-operator{
+    font-size: 1.75rem;
+}
+
+.zero{
+    border-radius: 1rem;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
